@@ -36,15 +36,61 @@
    <div class="container">
     <div id="circle">
         <h1 style="text-align:center ;margin-top:40px;">password</h1>
+        <br>
         <p style="text-align:center ;">enter your password</p>
         <input type="password" name="password" id="password" >
+        <h3 id="text"></h3>
         <button id="enter-lab" onclick="myFunction()">Enter Lab</button>
     </div>
-  <div class="section">
-    <div class="left-section"></div>
-    <div class="right-section"></div>
-  </div>
-   </div>
+    <div class="box hide">
+    <div id="app">
+    </div>
+    <button id="stop-timer">STOP</button>
+    </div>
+    <div id="banner">
+        <div class="doorHoverLeft"><span class="doorText"></span>
+            <h2 class="leftdooritem" style="color: white;">java</h2>
+            <p id="nexxt-lab">this course is provide by</p>
+            <ul>
+                <li>labs</li>
+                <li>exercise</li>
+                <li>do it yourself</li>
+            </ul>
+        <div class="item1">
+            <img src="/img/icons8-exercise-51.png" alt="">
+           <div class="item1-content1">
+            <h5>Exercise</h5>
+            <h1>9</h1>
+           </div>
+        </div>
+        <div class="item2">
+            <img src="/img/icons8-total-sales-50.png" alt="">
+            <div class="item2-content2">
+             <h5>Projects</h5>
+             <h1>2</h1>
+            </div>
+        </div>
+        <div class="item3">
+            <img src="/img/icons8-timer-64.png" alt="">
+            <div class="item3-content3">
+             <h5>Time spent</h5>
+             <h1>5</h1>
+            </div>
+        </div>
+    
+    </div>
+        <div class="doorHoverRight"><span class="doorText"></span>
+            <div id="battery">
+                <div id="charge"></div>
+                <div id="charge-level"></div>
+              </div>
+              <div id="charging-time"></div>
+              <h1>45 hour left</h1>
+              <p>out of 50 hour</p>
+            </div>
+        </div>
+        
+</div>
 
    <script src="xyz.js"></script>
 </body>
