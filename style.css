@@ -18,10 +18,9 @@ img{
     /* background-color: #ffffff ; */
     top: 0; left: 0; right: 0;
     box-shadow: 0 5px 10px rgba(0,0,0,.1);
-    padding:20px 3%;
+    padding:0px 3%;
     padding-top:1px;
     align-items: center;
-    justify-content: space-between;
     z-index: 1000;
 }
 .header{
@@ -37,13 +36,14 @@ img{
 .header .navbar ul li a{
     font-size: 15px;
     padding: 20px;
-    color: white;
+    color: rgba(10, 163, 180, 0.993);
+    font-weight: 500;
     display: block;
     text-decoration: none;
 }
 .header .navbar ul li a:hover{
     /* background-color: #333; */
-    color:rgb(152, 8, 255);
+    color:rgb(8, 255, 255);
 }
 .header .navbar ul li ul{
     position: absolute;
@@ -78,36 +78,36 @@ img{
    flex-direction:row;
 
 }
-.left-section{
-    width: 50%;
-    min-height: 700px;
-    border: 1px solid rgb(0, 255, 238);
-}
-.right-section{
-    width: 50%;
-    min-height: 700px;
-    border: 5px solid rgb(0, 255, 238);
-}
+
 
 #circle {
-    background: lightblue;
+    background: rgb(26, 26, 26);
     border-radius: 50%;
     width: 300px;
     height: 300px;
     margin-left: 39%;
-    position: absolute;
-    margin-top: 20%;
+    position:absolute;
+    margin-top: 15%;
     z-index: 999;
     border: 5px solid rgb(255, 255, 255);
+    
+}
+#circle h1,p,h3{
+    color:rgba(0, 255, 255, 0.853)
 }
 #password{
-    margin-top: 30px;
-    margin-left: 70px;
+    background-color: #000;
+    margin-top: 10px;
+    margin-left: 60px;
     height:30px ;
+    border: 1px solid aqua;
+}
+input{
+    color: cadetblue;
 }
 #enter-lab{
     margin-top: 10px;
-    margin-left: 35%;
+    margin-left: 32%;
     width: 100px;
     height:30px ;
     background-color:aqua;
@@ -118,9 +118,9 @@ img{
 #banner { 
     background: url(img/library-img.jpg) no-repeat center 0; 
     background-size: cover; 
-    height: 700px; 
-    border: solid 3px #006baf; 
-    position: relative;  
+    height: 600px; 
+    /* border: solid 3px #006baf;  */
+    position:relative;  
     overflow: hidden 
 }
 .doorHoverLeft { 
@@ -133,6 +133,8 @@ img{
     box-shadow: inset 0 0 0 1px rgba(0,0,0,0.40); 
     background: rgb(0, 0, 0); 
    border: 3px solid aqua;
+   animation-name: animateModel1;
+   animation-duration: 300ms;
 }
 .doorHoverRight { 
     position: absolute; 
@@ -140,11 +142,22 @@ img{
     top: 0; 
     bottom: 0; 
     width: 50%;
-    transition: 3s ease-in-out; 
     box-shadow: inset 0 0 0 1px rgba(0,0,0,0.40); 
     background-color: #000;
     border: 3px solid aqua;
+ 
 }
+#leftdoor{
+    /* transition: 3s ease-in;  */
+    animation-name: animateModel1;
+    animation-duration: 3000ms;
+  }
+  
+  #rightdoor{
+    /* transition: 3s ease-in-out;  */
+    animation-name: animateModel2;
+    animation-duration: 3000ms;
+  }
 
 .hide{
     display: none;
@@ -155,13 +168,24 @@ img{
     background-color: white;
 }
 
-
- /* .doorHoverLeft:hover{ 
-    left: -50%; 
+/* Model animation Section */
+@keyframes animateModel1{
+    from{
+        left: 0%;
+    }
+    to{
+        left: -50%;
+    }
 }
-.doorHoverRight:start { 
-    right: -50%; 
-} */
+@keyframes animateModel2{
+    from{
+        right: 0%;
+    }
+    to{
+        right: -50%;
+    }
+}
+
 
 /* ********************timer */
 #app{
@@ -334,46 +358,6 @@ img{
    font-size:x-small;
    color: darkgray;
 }
-@media(max-width:991px){
-    .header{
-        position:absolute;
-        padding-top: 1px;
-        padding-bottom: 1px;
-        padding-right: 30px;
-    }
-    .header label{
-        display: initial;
-    }
-    .header .navbar{
-        position: absolute;
-        top: 100%;left: 0;right: 0;
-        background-color: #fff;
-        border-top: 1px solid #000;
-        display: none;
-
-    }
-    .header .navbar ul li{
-        width: 100%;
-        border-top: 1px solid rgba(0, 0, 0, 0.072);
-
-    }
-    .header .navbar ul li a{
-        text-align: center;
-        color: #000;
-    }
-    .header .navbar ul li a:hover{
-        background-color: rgba(0, 0, 0, 0.719);
-        color: white;
-    }
-    .header .navbar ul li ul{
-        position: relative;
-        width: 100%;
-    }
-    #menu-bar:checked~.navbar{
-        display: initial;
-    }
-
-}
 /* ********************************************************************************88 */
 
 
@@ -387,7 +371,7 @@ img{
     position: relative;
     display: grid;
     place-items: center;
-    margin-top: 30%;
+    margin-top: 40%;
     transform:rotate(270deg);
   }
   #battery:before {

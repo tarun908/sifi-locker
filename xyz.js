@@ -2,6 +2,8 @@ const btn = document.getElementById('enter-lab');
 const banner = document.getElementById('banner');
 const doorHoverLeft=document.querySelector(".doorHoverLeft")
 const doorHoverRight=document.querySelector(".doorHoverRight")
+const leftdoor=document.querySelector("#leftdoor")
+const rightdoor=document.querySelector("#rightdoor")
 const box=document.querySelector(".box")
 const circle=document.querySelector("#circle")
 const stopTimer = document.getElementById('stop-timer');
@@ -9,26 +11,20 @@ const stopTimer = document.getElementById('stop-timer');
 let x = document.getElementById("password");
 // ***********************set password***********************
 
-
-
-
-
-
-
-
-
 btn.addEventListener('click', function onClick(event) {
  if(x.value== "mypas123"){
   banner.classList.add("hide")
   box.classList.remove("hide")
   circle.classList.add("hide")
+  text.innerHTML=""
  }else{
-  text.innerHTML="password incorrect"
+  text.innerHTML="incorrect password!"
  }
 });
 
 
-// *******************************timer***********************************************************
+
+// *******************************TIMER***********************************************************
 
 const FULL_DASH_ARRAY = 283;
 const WARNING_THRESHOLD = 10;
@@ -48,7 +44,7 @@ const COLOR_CODES = {
   }
 };
 
-const TIME_LIMIT = 50;
+const TIME_LIMIT = 60;
 let timePassed = 0;
 let timeLeft = TIME_LIMIT;
 let timerInterval = null;
@@ -156,7 +152,7 @@ stopTimer.addEventListener('click', function onClick(event) {
   circle.classList.remove("hide")  
  });
  
-//  ***********************************
+//  **********************************BATTRY **************************************
 const chargeLevel = document.getElementById("charge-level");
 const charge = document.getElementById("charge");
 const chargingTimeRef = document.getElementById("charging-time");
